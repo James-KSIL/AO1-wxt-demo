@@ -30,3 +30,11 @@ Audience guidance
 Notes for maintainers
 - Keep this repository docs-only. When updating, do not paste implementation snippets or build files.
 - Only sanitized screenshots and high-level pseudocode are permitted.
+ 
+## What you will find here
+
+- A one-page system diagram for a quick 2-minute overview.
+- A sanitized deep-dive that explains runtime boundaries, data flow, and deterministic guarantees.
+- A short set of behavior demonstrations (three realistic examples) showing INPUT → OUTPUT and human-readable rationale.
+
+This repository is a documentation artifact only — it is not runnable, and it deliberately omits implementation details and numeric logic.
