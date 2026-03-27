@@ -31,6 +31,32 @@ Notes for maintainers
 - Keep this repository docs-only. When updating, do not paste implementation snippets or build files.
 - Only sanitized screenshots and high-level pseudocode are permitted.
  
+## Recruiter-Facing Architecture Summary
+
+AO1 is a deterministic decision-support system for vehicle acquisition workflows. It is designed to reduce ambiguity and enable fast, auditable decisions at the point of inspection on auction platforms. This repository documents the system design, not the implementation.
+
+TL;DR — what to look for (2-minute pass)
+- One-page diagram: runtime boundaries, primary data flow, and interfaces.
+- Deep-dive: stage-by-stage responsibilities (ingestion, normalization, cost aggregation, deterministic evaluation, risk augmentation, policy).
+- Deterministic guarantees: outputs are reproducible and auditable; no hidden stochastic decisions.
+
+How to review (recommended order)
+1. Open the [One-Page System Diagram](./ARCHITECTURE_ONE_PAGER.md) for a quick runtime sketch.
+2. Read the sanitized [Architecture Deep Dive](./ARCHITECTURE_DEEP_DIVE.md) for stage-level responsibilities and trade-offs.
+3. Inspect the `docs/ENGINEER_HANDOFF.md` for maintenance notes (sanitized).
+
+What this repo demonstrates
+- Clear separation of concerns between ingestion, normalization, deterministic evaluation, and policy layers.
+- Auditability: evaluation artifacts and provenance are persisted to enable reproducible reviews.
+- Operational thinking: how to keep advisory/model signals separate from authoritative decision outputs.
+
+IP and safety notes
+- This repo intentionally omits any code, numeric formulas, thresholds, or private heuristics. The private repository contains the full implementation and is not public.
+
+Contact / next steps
+- If you want a short walkthrough or an interview-oriented narrative, I can prepare a 2-slide summary and a short speaking script tailored for hiring managers.
+
+ 
 ## What you will find here
 
 - A one-page system diagram for a quick 2-minute overview.
