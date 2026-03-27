@@ -53,6 +53,81 @@ What this repo demonstrates
 IP and safety notes
 - This repo intentionally omits any code, numeric formulas, thresholds, or private heuristics. The private repository contains the full implementation and is not public.
 
+## Demonstration of System Behavior
+
+The following examples illustrate how AO1 processes real-world inputs and produces structured, deterministic outputs. All values are representative and slightly rounded for clarity. Proprietary formulas and thresholds are intentionally omitted.
+
+All examples are derived from real system outputs, with values slightly normalized for clarity and to protect proprietary logic.
+
+### Example 1 — Moderate Margin, Controlled Risk
+
+**INPUT**
+
+- Vehicle: 2017 Fiat 124 Spider Classica  
+- Mileage: ~102,000 miles  
+- Platform: IAA  
+- Condition: Moderate wear, typical auction uncertainty  
+
+**OUTPUT**
+
+- **Decision:** WATCH  
+- **Bid Cap:** ~$1,900  
+- **Estimated Exit Value:** ~$5,800  
+- **Headroom:** ~$3,400  
+- **Risk Tier:** LOW  
+
+**Reasoning**
+
+- Projected resale value provides sufficient margin, but not enough to justify immediate action  
+- Cost stack remains within acceptable bounds, though limited buffer reduces aggressiveness  
+- No major risk indicators present, but margin compression suggests monitoring rather than targeting  
+
+### Example 2 — High Headroom, Opportunistic Candidate
+
+**INPUT**
+
+- Vehicle: 2016 BMW X5 xDrive40e  
+- Mileage: ~148,000 miles  
+- Platform: IAA  
+- Condition: Higher mileage, premium segment  
+
+**OUTPUT**
+
+- **Decision:** WATCH  
+- **Bid Cap:** ~$4,600  
+- **Estimated Exit Value:** ~$8,800  
+- **Headroom:** ~$6,100  
+- **Risk Tier:** LOW  
+
+**Reasoning**
+
+- Strong headroom relative to acquisition cost indicates potential opportunity  
+- Elevated mileage introduces uncertainty, limiting immediate classification as a target  
+- Maintained as a monitored candidate pending price movement or additional signals  
+
+### Example 3 — Low Margin, Rejected Opportunity
+
+**INPUT**
+
+- Vehicle: 2010 Honda Accord LX  
+- Mileage: ~120,000 miles  
+- Platform: IAA  
+- Condition: Standard wear  
+
+**OUTPUT**
+
+- **Decision:** PASS  
+- **Bid Cap:** $0  
+- **Estimated Exit Value:** ~$3,300  
+- **Headroom:** ~$1,400  
+- **Risk Tier:** LOW  
+
+**Reasoning**
+
+- Margin does not meet minimum acceptable threshold  
+- Limited headroom reduces ability to absorb unexpected costs  
+- System rejects opportunity to enforce disciplined acquisition criteria
+
 Contact / next steps
 - If you want a short walkthrough or an interview-oriented narrative, I can prepare a 2-slide summary and a short speaking script tailored for hiring managers.
 
