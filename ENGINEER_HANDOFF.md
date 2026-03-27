@@ -1,4 +1,4 @@
-# Engineer Handoff — AO1 (Internal, IP-Safe)
+Engineer Handoff — AO1 (Internal, IP-Safe)
 
 This handoff is written for engineers who will work on AO1. It explains system behavior, operational constraints, data flows, invariants, extension points, and failure modes without revealing implementation code, numeric formulas, or private heuristics.
 
